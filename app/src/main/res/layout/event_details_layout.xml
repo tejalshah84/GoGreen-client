@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbarAlwaysDrawHorizontalTrack="false"
+    >
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:background="#FFF" android:id="@+id/tableLayout"
+        android:stretchColumns="1,2" android:padding="15dp" android:layout_weight="1"
+       >
+
+        <!-- tableRow0 -->
+        <TableRow android:layout_height="wrap_content" android:minHeight="120px"
+            android:layout_width="match_parent" android:id="@+id/tableRow0" android:gravity="center">
+            <TextView android:id="@+id/EventLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event Details"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center|top"
+                android:textSize="22dp"
+                android:textIsSelectable="false"
+                android:textStyle="bold"
+                android:layout_span="2"
+                android:typeface="serif"/>
+        </TableRow>
+
+        <!-- tableRow1 -->
+        <TableRow android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:id="@+id/tableRow1">
+            <TextView
+                android:id="@+id/tv_eventNameLabel"
+                android:text="@string/eventNameLabel"
+                style="@style/EventLabelTextView" >
+            </TextView>
+            <TextView
+                android:id="@+id/tv_eventName"
+                style="@style/EventValueTextView">
+            </TextView>
+        </TableRow>
+
+        <!-- tableRow2 -->
+        <TableRow android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:id="@+id/tableRow2">
+            <TextView
+                android:id="@+id/tv_eventDetailLabel"
+                android:text="@string/eventDetailLabel"
+                style="@style/EventLabelTextView">
+            </TextView>
+            <TextView
+                android:id="@+id/tv_eventDetail"
+                android:inputType="textMultiLine"
+                style="@style/EventValueTextView">
+            </TextView>
+        </TableRow>
+
+        <!-- tableRow3 -->
+        <TableRow android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:id="@+id/tableRow3">
+            <TextView
+                android:id="@+id/tv_hostNameLabel"
+                android:text="@string/hostNameLabel"
+                style="@style/EventLabelTextView">
+            </TextView>
+            <TextView
+                android:id="@+id/tv_hostName"
+                style="@style/EventValueTextView">
+            </TextView>
+        </TableRow>
+
+        <!-- tableRow4 -->
+        <TableRow android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:id="@+id/tableRow4">
+            <TextView
+                android:id="@+id/tv_eventDateLabel"
+                android:text="@string/eventDateLabel"
+                style="@style/EventLabelTextView">
+            </TextView>
+            <TextView
+                android:id="@+id/tv_eventDate"
+                style="@style/EventValueTextView">
+            </TextView>
+        </TableRow>
+
+        <!-- tableRow5 -->
+        <TableRow android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:id="@+id/tableRow5">
+            <TextView
+                android:id="@+id/tv_eventTimeLabel"
+                android:text="@string/eventTimeLabel"
+                style="@style/EventLabelTextView">
+            </TextView>
+            <TextView
+                android:id="@+id/tv_eventTime"
+                style="@style/EventValueTextView">
+            </TextView>
+        </TableRow>
+
+        <!-- tableRow6 -->
+        <TableRow android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:id="@+id/tableRow6">
+            <TextView
+                android:id="@+id/tv_LocLabel"
+                android:text="@string/LocLabel"
+                style="@style/EventLabelTextView">
+            </TextView>
+            <TextView
+                android:id="@+id/tv_Loc"
+                android:inputType="textMultiLine"
+                style="@style/EventValueTextView">
+            </TextView>
+        </TableRow>
+
+    </TableLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+       >
+
+    <TextView
+        android:id="@+id/tv_takeMeToLabel"
+        android:text="@string/takeMeToLabel"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:textIsSelectable="false"
+        android:textStyle="bold"
+        style="@style/EventLabelTextView" >
+    </TextView>
+
+        <fragment
+            android:id="@+id/location_map_takeMeTo"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            class="com.example.amanleenpuri.gogreen.ui.MySupportMapFragment"/>
+
+    </LinearLayout>
+
+    <!--LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_eventNameLabel"
+        android:text="@string/eventNameLabel"
+        style="@style/EventLabelTextView" >
+    </TextView>
+    <TextView
+        android:id="@+id/tv_eventName"
+        style="@style/EventValueTextView">
+    </TextView>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_eventDetailLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|top"
+        android:textSize="18dp"
+        android:text="@string/eventDetailLabel"
+        android:typeface="serif"
+        android:textColor="#006600"
+        android:layout_margin="5dp">
+    </TextView>
+    <TextView
+        android:id="@+id/tv_eventDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|top"
+        android:textSize="18dp"
+        android:lines="1"
+        android:inputType="textMultiLine"
+        android:typeface="serif"
+        android:textColor="#006600"
+        android:layout_margin="5dp">
+    </TextView>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_hostNameLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|top"
+            android:textSize="18dp"
+            android:text="@string/hostNameLabel"
+            android:typeface="serif"
+            android:textColor="#006600"
+            android:layout_margin="5dp">
+        </TextView>
+        <TextView
+            android:id="@+id/tv_hostName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|top"
+            android:textSize="18dp"
+            android:typeface="serif"
+            android:textColor="#006600"
+            android:layout_margin="5dp">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:id="@+id/tv_eventDateLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_marginLeft="30dp"
+            android:text="@string/eventDateLabel"
+            android:layout_marginRight="30dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+        <TextView android:id="@+id/tv_eventDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_marginLeft="30dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:id="@+id/tv_eventTimeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/eventTimeLabel"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+        <TextView android:id="@+id/tv_eventTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_marginLeft="30dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/enterLocEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|top"
+        android:textSize="18dp"
+        android:hint="@string/enterLoc"
+        android:typeface="serif"
+        android:textColor="#006600"
+        android:layout_margin="5dp">
+    </EditText>
+
+    <Button android:id="@+id/selectLocTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selectLoc"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:onClick="showLocation" />
+
+
+    <fragment
+        android:id="@+id/location_map"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        class="com.example.amanleenpuri.gogreen.ui.MySupportMapFragment"/>
+
+
+
+    <Button android:id="@+id/publishEventButton"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:background="#47d147"
+        android:layout_gravity="right"
+        android:text="Publish Event"/-->
+
+</LinearLayout>
+    </ScrollView>

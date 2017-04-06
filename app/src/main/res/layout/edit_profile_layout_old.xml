@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:shrinkColumns="*"
+    android:stretchColumns="*">
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/EventLabelTextView"
+            android:text="@string/firstName" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:layout_span="2" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            style="@style/EventLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lastName" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:layout_span="2" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            style="@style/EventLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/roleType" >
+        </TextView>
+
+        <Spinner
+            android:id="@+id/role_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:spinnerMode="dropdown" />
+        <!--EditText
+            android:id="@+id/role_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:layout_span="2" /-->
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            style="@style/EventLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interestType" >
+        </TextView>
+
+        <Spinner
+            android:id="@+id/interest_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:spinnerMode="dropdown" />
+
+        <!--EditText
+            android:id="@+id/interest_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:layout_span="2" /-->
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            style="@style/EventLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cityName" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:layout_span="2" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            style="@style/EventLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stateName" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/state_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:layout_span="2" />
+    </TableRow>
+
+    <TableRow android:minHeight="180px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <Button
+            android:id="@+id/bn_retrieve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fetch"
+            android:onClick="fetchUser"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/bn_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:layout_gravity="center"
+            android:onClick="registerUser"
+            android:layout_weight="1"/>
+
+    </TableRow>
+
+</TableLayout>

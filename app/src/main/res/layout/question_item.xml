@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="10dp"
+    android:clickable="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="17sp"
+        android:paddingLeft="5dp"
+        style="@style/EventLabelTextView"
+        android:id="@+id/tv_question"
+        android:textColor="#003300"
+        android:layout_gravity="left|bottom"
+        android:focusable="false"/>
+
+
+    <!--LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button android:id="@+id/viewAnsButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/viewAnswers"/>
+
+    </LinearLayout-->
+
+    <Button android:id="@+id/viewAnsButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="@string/viewAnswers"/>
+
+    <LinearLayout android:id="@+id/ans_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+    android:layout_height="wrap_content">
+
+    <ListView android:id="@+id/ans_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.QuestionForumActivity"
+        tools:listitem="@layout/answer_item"
+        android:focusable="true"></ListView>
+
+        <!--Button android:id="@+id/answerButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ansComment"/-->
+    </LinearLayout>
+</LinearLayout>

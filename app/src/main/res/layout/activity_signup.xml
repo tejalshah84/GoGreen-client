@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/firstName"
+            style="@style/EventLabelTextView"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/tv_firstNameLabel" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="@string/hintEnterFirstName"
+            android:id="@+id/et_firstNameSignUp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/EventLabelTextView"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lastName"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/tv_lastNameLabel" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/et_lastNameSignUp"
+            android:hint="@string/hintEnterLastName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/EventLabelTextView"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/roleType"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/tv_roleLabel" />
+
+        <Spinner
+            android:id="@+id/sp_roleSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/EventLabelTextView"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/interestType"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/tv_interestAreaLabel" />
+
+        <Spinner
+            android:id="@+id/sp_interestAreaSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/cityName"
+            style="@style/EventLabelTextView"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/tv_cityLabel" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/et_citySignUp"
+            android:hint="@string/city_hint"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/stateName"
+            style="@style/EventLabelTextView"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/tv_stateLabel" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/et_stateSignUp"
+            android:hint="@string/state_hint"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/user_name_label"
+            style="@style/EventLabelTextView"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/tv_userNameLabel" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/et_userNameSignUp"
+            android:hint="@string/user_name_hint"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/password_label"
+            style="@style/EventLabelTextView"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/tv_passwordLabel" />
+
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:inputType="textPassword"-->
+            <!--android:ems="10"-->
+            <!--android:id="@+id/editText"-->
+            <!--android:layout_gravity="center_horizontal" />-->
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/et_passwordSignUp"
+            android:hint="@string/password_hint"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/re_enter_password"
+            style="@style/EventLabelTextView"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/tv_reEnterpasswordLabel" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/et_reEnterPasswordSignUp"
+            android:hint="@string/re_enter_password_hint"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:id="@+id/btn_signUp"
+            android:layout_gravity="center_horizontal"
+            style="@style/ButtonAppearance" />
+
+    </LinearLayout>
+</ScrollView>

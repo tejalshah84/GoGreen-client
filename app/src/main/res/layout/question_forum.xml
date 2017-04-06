@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="fill_parent">
+
+        <!--TextView android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="My Mango Plant is Spoiling. What should I do?"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button android:id="@+id/viewAnsButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="View Answer (3)"/>
+
+        <Button android:id="@+id/answerButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Answer"/>
+
+    </LinearLayout>
+
+    <TextView android:id="@+id/answerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textSize="20dp"
+        android:text="This is mango scale insects. Scale insects mainly feed on plant sap.
+Spraying emulsive oil on plant and Collect and burn the fallen leaves and twigs."/>
+
+    <TextView android:id="@+id/lineText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="=========================="/>
+
+    <TextView android:id="@+id/questionTextDel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="My Orchid Plant is not growing since many days I am doubtful if it is dying. Any suggestions?"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button android:id="@+id/bviewAnsDel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="View Answer (5)"/>
+
+        <Button android:id="@+id/ansDel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Answer"/>
+
+    </LinearLayout-->
+
+    <ListView android:id="@+id/qa_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        tools:context=".ui.QuestionForumActivity"
+        tools:listitem="@layout/question_item"
+        android:focusable="true"></ListView>
+
+</LinearLayout>

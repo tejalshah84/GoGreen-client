@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/user_image_search"
+        android:layout_height="@dimen/icon_height"
+        android:layout_width="@dimen/icon_width"
+        android:src="@color/colorAccent"
+        android:scaleType="fitCenter"
+        app:riv_corner_radius="30dip"
+        app:riv_border_width="2dip"
+        app:riv_border_color="#333333"
+        app:riv_mutate_background="true"
+        app:riv_tile_mode="repeat"
+        app:riv_oval="true"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:clickable="false"
+        android:focusable="false"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/username_search"
+        android:layout_gravity="center_vertical"
+        android:focusable="false"/>
+    <ImageButton
+        android:id="@+id/become_follower_icon"
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="@dimen/icon_height"
+        android:src="@drawable/ic_person_add_white_24dp"
+        android:focusable="false"/>
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1"/>
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:id="@+id/search_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/places_ic_clear"/>
+        <EditText android:id="@+id/search_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:hint="Enter search text.."
+            android:textColor="@color/colorWhite"/>
+        <ImageView
+            android:id="@+id/searchpage_icon"
+            android:layout_width="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_search_white_24dp"/>
+    </LinearLayout>
+
+    <ListView android:id="@+id/search_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        tools:context=".ui.SearchResultsActivity"
+        tools:listitem="@layout/search_list_item"
+        android:focusable="true"></ListView>
+
+</LinearLayout>
